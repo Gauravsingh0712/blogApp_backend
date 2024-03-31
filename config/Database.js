@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 // load environment variables from a .env file into process.env
 require("dotenv").config();
 
+//function for database connection
 const connectWithDb = () => {
   mongoose
     .connect(process.env.DATABASE_URL, {
@@ -16,3 +17,4 @@ const connectWithDb = () => {
       process.exit(1);
     });
 };
+module.exports = connectWithDb;
