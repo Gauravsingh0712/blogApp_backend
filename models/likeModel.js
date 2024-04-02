@@ -9,7 +9,7 @@ const likeSchema = new mongoose.Schema({
     ref: "Post",
   },
   user: {
-    type: string,
+    type: String,
     required: true,
   },
 });

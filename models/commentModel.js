@@ -1,22 +1,21 @@
-//import moongoose
+// Import Mongoose
 const mongoose = require("mongoose");
 
-//route handler
-// In the comment schema -> post,user,body
+// Route Handler
 const commentSchema = new mongoose.Schema({
   post: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Post",
+    ref: "Post", //reference to the post model
   },
   user: {
-    type: string,
+    type: String,
     required: true,
   },
   body: {
-    type: string,
+    type: String,
     required: true,
   },
 });
 
-//export
+// Export
 module.exports = mongoose.model("Comment", commentSchema);

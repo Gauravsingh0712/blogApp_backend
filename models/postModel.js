@@ -5,11 +5,11 @@ const mongoose = require("mongoose");
 // In the post schema -> title,body,likes[],comments[]
 const postSchema = new mongoose.Schema({
   title: {
-    type: string,
+    type: String,
     required: true,
   },
   body: {
-    type: string,
+    type: String,
     required: true,
   },
   likes: [

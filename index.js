@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 const port = process.env.PORT;
 
-//middleware
+//middleware which helps us to parse the url data
 app.use(express.json());
 
 const blog = require("./routes/blog");
@@ -13,7 +13,7 @@ const blog = require("./routes/blog");
 app.use("/api/v1", blog);
 
 //database connection
-const connectWithDb = require("./config/Database");
+const connectWithDb = require("./config/database");
 connectWithDb();
 
 app.listen(port, () => {
