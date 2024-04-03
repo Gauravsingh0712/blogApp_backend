@@ -1,4 +1,5 @@
 const express = require("express");
+//creation of application
 const app = express();
 
 require("dotenv").config();
